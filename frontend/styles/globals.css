@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page-section {
+  min-height: 600px; /* Default minimum height */
+  padding: 2rem 0;
+}
+
+
+:root {
+  --gradient-primary: linear-gradient(to right, #3545b9, #1c0aa6);
+  --text-gradient: linear-gradient(to right, #ff62c0, #9666ff, #5379ff);
+}
+
+.dark {
+  --gradient-primary: linear-gradient(to right, #2a3794, #150885);
+  --text-gradient: linear-gradient(to right, #ff62c0, #9666ff, #5379ff);
+}
+
+@layer utilities {
+  .text-gradient {
+    background-image: var(--text-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+}
